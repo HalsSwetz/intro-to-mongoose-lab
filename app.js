@@ -37,13 +37,13 @@ const runMenuOptions = async () => {
             // '4': deleteCustomer,
             '5': () => {
                 exit = true;
-                console.log("You have exited the premises");
+                console.log("You have exited the menu");
             },
         };
         if (actions[choose]) {
             await actions[choose]();
         } else {
-            console.log('Not a valid choice.');
+            console.log('Choose a different number!');
         };
     }
 };
