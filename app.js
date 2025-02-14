@@ -14,6 +14,9 @@ const connect = async () => {
     process.exit();
 };
 
+//tried to write logic avoiding just putting 10 console.logs
+//in here, finally got something that did exactly what the lab
+//asked for
 const runMenuOptions = async () => {
     const menu = `
     Welcome to the CRM
