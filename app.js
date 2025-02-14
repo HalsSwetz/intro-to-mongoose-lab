@@ -14,9 +14,10 @@ const connect = async () => {
     process.exit();
 };
 
-//tried to write logic avoiding just putting 10 console.logs
-//in here, finally got something that did exactly what the lab
-//asked for
+//had a lot of console.logs, wanted something easier to read
+//would need to comment back in the actions('3' and '4') below
+//to have the updateCustomer and deleteCustomer functional
+
 const runMenuOptions = async () => {
     const menu = `
     Welcome to the CRM
@@ -75,3 +76,27 @@ const viewCustomers = async () => {
 
 
 connect();
+
+
+//would need to add a call function or comment back in
+const updateCustomer = async () => {
+    const id = '6573745144784f6dc034e1df';
+    const updatedCustomer = await Customer.findByIdAndUpdate(
+      id,
+      { isComplete: true },
+      { new: true }
+    );
+    console.log("Updated customer:", updatedCustomer);
+  };
+ 
+  
+
+//would need to comment back in the function above
+
+const deleteCustomer = async () => {
+    const id = '6573745144784f6dc034e1df';
+    const removedCustomer = await Customer.findByIdAndDelete(id);
+    console.log('Removed customer:', removedCustomer)
+  }
+  
+
